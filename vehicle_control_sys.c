@@ -104,11 +104,9 @@ void SetTrafficLight(){
 void VehicleSpeed(int num){
 	V.vehicle_speed = num;
 	if(num == 30){
-		//if(V.ac_state == OFF){
 			V.ac_state = ON;
 			V.room_temp = V.room_temp * (5.0/4) + 1;
 
-		//if(V.eng_temp_controller == OFF){
 			V.eng_temp_controller = ON;
 			V.eng_temp = V.eng_temp * (5.0/4) + 1;
 
@@ -182,7 +180,7 @@ int main(void) {
 	V.ac_state = OFF;
 	V.eng_temp_controller = OFF;
 	V.eng_state = OFF;
-	//do{
+	
 	Menu();
-	//}while(1);
+	
 }
